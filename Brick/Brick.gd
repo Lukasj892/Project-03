@@ -13,14 +13,15 @@ export var time_v = 1.5
 export var sway_amplitude = 3.0
 
 var colors = [
-	Color8(224,49,49)
-	,Color8(255,146,43)
-	,Color8(255,212,59)
-	,Color8(148,216,45)
-	,Color8(34,139,230)
-	,Color8(132,94,247)
-	,Color8(190,75,219)
-	,Color8(134,142,150)
+	Color8(224,49,49) #0
+	,Color8(255,146,43) #1
+	,Color8(255,212,59) #2
+	,Color8(148,216,45) #3
+	,Color8(34,139,230) #4
+	,Color8(132,94,247) #5
+	,Color8(190,75,219) #6
+	,Color8(134,142,150) #7
+	,Color8(255, 255, 255) #8
 ]
 var color_index = 0
 var color_distance = 0
@@ -41,7 +42,8 @@ func _ready():
 	elif score >= 60: color_index=  4
 	elif score >= 50: color_index = 5
 	elif score >= 40: color_index = 6
-	else: color_index = 7
+	elif score >= 30: color_index = 7
+	else: color_index = 8
 	$ColorRect.color = colors[color_index]
 	color_initial_position = $ColorRect.rect_position
 	color_randomizer = Vector2(randf()*6-3.0, randf()*6-3.0)
@@ -66,7 +68,8 @@ func _physics_process(_delta):
 func hit(_ball):
 	Global.color_rotate = Global.color_rotate_amount
 	Global.color_position = _ball.global_position
-	die()
+	if not self.score < 30:
+		die()
 
 func die():
 	dying = true

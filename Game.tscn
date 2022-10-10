@@ -229,6 +229,7 @@ script = ExtResource( 9 )
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 pause_mode = 2
 stream = ExtResource( 10 )
+volume_db = 2.0
 autoplay = true
 
 [node name="Paddle_Audio" type="AudioStreamPlayer" parent="."]

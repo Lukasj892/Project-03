@@ -7,7 +7,7 @@
 [ext_resource path="res://UI/Boundary.gd" type="Script" id=5]
 [ext_resource path="res://Assets/wall.wav" type="AudioStream" id=6]
 
-[sub_resource type="Shader" id=2]
+[sub_resource type="Shader" id=4]
 code = "// Water shader
 
 shader_type canvas_item;
@@ -65,7 +65,7 @@ void fragment(){
 }"
 
 [sub_resource type="ShaderMaterial" id=3]
-shader = SubResource( 2 )
+shader = SubResource( 4 )
 shader_param/OCTAVE = 6
 shader_param/mulscale = 5.0
 shader_param/height = 0.6

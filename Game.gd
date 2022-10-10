@@ -27,5 +27,6 @@ func _ready():
 			Instructions.set_instructions(level["name"],level["instructions"])
 
 func _physics_process(_delta):
-	if Input.is_key_pressed(KEY_SPACE):
-		Global.next_level()
+	#if Input.is_key_pressed(KEY_SPACE): 
+		#Global.next_level()
+	pass

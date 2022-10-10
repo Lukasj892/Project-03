@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 var decay = 0.01
+var time_bounce = 1
 
 func _ready():
 	pass

@@ -1,9 +1,9 @@
 # Brick Breaker 2D
 
-Context and date
+## Date
 Newest Version uploded on 10/10/22
 
-Description
+## Description
 2D brick breaker with 4 stages, music, sfx, and more.
 
 ## Implementation
